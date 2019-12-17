@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <include file="migration.xml"/>
+
+    <changeSet id="credit-card-related-data-import" author="Marina Krivonosova">
+        <insert tableName="credit_cards">
+            <column name="id">ccId1</column>
+            <column name="card_number">1234567891011121</column>
+            <column name="expiration_date">2022-10</column>
+            <column name="cvc">508</column>
+            <column name="card_holder">PETR IVANOV</column>
+            <column name="balance">85000.00</column>
+        </insert>
+        <insert tableName="credit_cards">
+            <column name="id">ccId2</column>
+            <column name="card_number">1234123412341234</column>
+            <column name="expiration_date">2023-07</column>
+            <column name="cvc">437</column>
+            <column name="card_holder">JON SNOW</column>
+            <column name="balance">4260.80</column>
+        </insert>
+        <insert tableName="credit_cards">
+            <column name="id">ccId3</column>
+            <column name="card_number">0203121322233233</column>
+            <column name="expiration_date">2020-12</column>
+            <column name="cvc">114</column>
+            <column name="card_holder">MONICA GELLER</column>
+            <column name="balance">38000.00</column>
+        </insert>
+        <insert tableName="credit_cards">
+            <column name="id">ccId4</column>
+            <column name="card_number">7080203010200010</column>
+            <column name="expiration_date">2023-01</column>
+            <column name="cvc">226</column>
+            <column name="card_holder">BRAD PITT</column>
+            <column name="balance">1000.00</column>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
